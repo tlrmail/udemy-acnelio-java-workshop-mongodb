@@ -3,6 +3,8 @@ package com.nelioalves.workshopmongo.domain;
 import java.io.Serializable;
 import java.util.Date;
 
+import com.nelioalves.workshopmongo.dto.UserDTO;
+
 public class Post implements Serializable {
 
 	/**
@@ -14,18 +16,18 @@ public class Post implements Serializable {
 	private Date date;
 	private String title;
 	private String body;
-	private User author;
+	private UserDTO authorDTO;
 
 	public Post() {
 
 	}
 
-	public Post(String id, Date date, String title, String body, User author) {
+	public Post(String id, Date date, String title, String body, UserDTO authorDTO) {
 		this.id = id;
 		this.date = date;
 		this.title = title;
 		this.body = body;
-		this.author = author;
+		this.authorDTO = authorDTO;
 	}
 
 
@@ -61,12 +63,12 @@ public class Post implements Serializable {
 		this.body = body;
 	}
 
-	public User getAuthor() {
-		return author;
+	public UserDTO getAuthorDTO() {
+		return authorDTO;
 	}
 
-	public void setAuthor(User author) {
-		this.author = author;
+	public void setAuthorDTO(UserDTO authorDTO) {
+		this.authorDTO = authorDTO;
 	}
 
 	@Override
